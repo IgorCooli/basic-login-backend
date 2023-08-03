@@ -24,6 +24,7 @@ public class AuthenticationController {
             log.info("Authenticating");
             return new ResponseEntity<>(jwtGenerator.generateToken(user), HttpStatus.OK);
         } catch (Exception e) {
+            //TODO trocar para status UNAUTHORIZED
             return new ResponseEntity<>(e.getMessage(), HttpStatus.FORBIDDEN);
         }
     }
