@@ -1,1 +1,5 @@
-
+jwt:
+  secret: 'NTg5MTI1OTgtODk1Zi00NTIxLWI5NDYtN2Q2ZTFiOWMyZTk0'
+app:
+  jwttoken:
+    message: 'Login Successful'
