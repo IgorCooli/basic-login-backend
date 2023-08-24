@@ -31,6 +31,7 @@ public class JwtFilter extends GenericFilterBean {
         final var authHeader = request.getHeader("authorization");
 
         if (authHeader == null || !authHeader.startsWith("Bearer ")) {
+            //TODO trocar ex
             throw new ServletException("An exception occurred");
         }
 

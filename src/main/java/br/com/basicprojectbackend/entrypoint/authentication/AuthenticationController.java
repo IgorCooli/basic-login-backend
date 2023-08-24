@@ -25,6 +25,7 @@ public class AuthenticationController {
             return new ResponseEntity<>(jwtGenerator.generateToken(user), HttpStatus.OK);
         } catch (Exception e) {
             //TODO trocar para status UNAUTHORIZED
+            //TODO remover, tratar erro no parseClaimsJws do JwtFilter e criar ex handler
             return new ResponseEntity<>(e.getMessage(), HttpStatus.FORBIDDEN);
         }
     }
